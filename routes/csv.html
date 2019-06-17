@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en-US" ng-app="App">
+<head>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<!-- CSS -->
+<link rel="stylesheet" type="text/css" href="../common/css/profile.css">
+</head>
+<body>
+    <!--Navigation-->
+        <nav class="navbar">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="/">Wisebatt</a>
+                </div>
+                <ul class="nav navbar-nav">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/profile.html">Profile</a></li>
+                    <li><a href="/python.html">Python Script</a></li>
+                    <li><a href="/email.html">Email</a></li>
+                    <li class="active"><a href="/csv.html">csv</a></li>
+                </ul>
+                <div class="nav navbar-nav topnav-right">
+                        <li><a href="/logout">logout</a></li>
+                </div>               
+            </div>
+        </nav>
+<div class="container">
+    <h2>CSV</h2>
+    <p>csv file data table</p>
+        <div ng-controller="csvCtrl">
+            <table class="table">
+                <thread>
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">First Name</th>
+                        <th scope="col">Last Name</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Gender</th>
+                        <th scope="col">IP Address</th>
+                    </tr>
+                </thread>
+                <tbody>
+                    <tr ng-repeat="contact in contactlist">
+                        <td scope="row">{{contact.id}}</td>
+                        <td>{{contact.first_name}}</td>
+                        <td>{{contact.last_name}}</td>
+                        <td>{{contact.email}}</td>
+                        <td>{{contact.gender}}</td>
+                        <td>{{contact.ip_address}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+</div>
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<!-- AngularJS -->
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<!-- Controller -->
+<script src="../common/js/csvcrtl.js"></script>
+</body>
+</html>
